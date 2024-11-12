@@ -1,0 +1,151 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1e272e;
+  color: #dcdde1;
+}
+
+/* Cover Section */
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("cover-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+.cover-content {
+  position: relative;
+  z-index: 1;
+}
+.cover img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #dcdde1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.cover h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+  color: #f5f6fa;
+}
+.cover p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+.get-started-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #2f3640;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.get-started-btn:hover {
+  background-color: #718093;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  background-color: #2f3640;
+}
+.profile-card {
+  background-color: #353b48;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px;
+  max-width: 380px;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+.profile-card h2 {
+  font-size: 24px;
+  color: #f5f6fa;
+  padding: 20px 0;
+}
+.profile-card p {
+  padding: 0 20px 20px;
+  line-height: 1.6;
+  color: #dcdde1;
+}
+.info {
+  font-size: 16px;
+  color: #dcdde1;
+  margin: 10px 0;
+}
+.info strong {
+  color: #00a8ff;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1e272e;
+  color: #dcdde1;
+  padding: 20px;
+  text-align: center;
+}
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.footer .social-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+.footer .social-links img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .cover h1 {
+    font-size: 28px;
+  }
+  .profile-card {
+    max-width: 90%;
+  }
+}
